@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     //gives us access to the object controller of type CharacterController2D
 
+    public Animator animator;
+
     public float runSpeed = 25f;
 
     float horizontalMove = 0f;
@@ -18,15 +20,26 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        //see if the player's speed is greater than or less than 0
+
         if (jumpFlag)
         {
+            animator.SetBool("IsJumping", true);
             jumpFlag = false;
         }
 
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            animator.SetBool("IsJumping", true);
         }
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", true);
+        jump = false;
     }
 
     void FixedUpdate()
