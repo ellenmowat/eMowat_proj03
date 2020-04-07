@@ -2528,7 +2528,7 @@ GameObject:
   - component: {fileID: 819193383}
   - component: {fileID: 819193382}
   - component: {fileID: 819193384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap - Interactable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3308,7 +3308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b9baf5ee32d90498938cf30a572e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 200
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -3339,6 +3339,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  m_JumpForceMod: 0
 --- !u!114 &1598262354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3354,6 +3355,9 @@ MonoBehaviour:
   controller: {fileID: 1598262353}
   animator: {fileID: 1598262355}
   runSpeed: 25
+  hasJumpPotion: 0
+  hasSpeedPotion: 0
+  potionModAmount: 0
 --- !u!95 &1598262355
 Animator:
   serializedVersion: 3
@@ -3373,3 +3377,72 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &6306519490048195063
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6306519491119346957, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_Name
+      value: PotionJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306519491119346955, guid: b7566954b97c08348a324c9052b46804,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7566954b97c08348a324c9052b46804, type: 3}
