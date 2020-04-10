@@ -3358,6 +3358,7 @@ MonoBehaviour:
   hasJumpPotion: 0
   hasSpeedPotion: 0
   potionModAmount: 0
+  jumpClip: {fileID: 8300000, guid: fd2e66a7c7ff5be4a9a539ef60554ca0, type: 3}
 --- !u!95 &1598262355
 Animator:
   serializedVersion: 3
